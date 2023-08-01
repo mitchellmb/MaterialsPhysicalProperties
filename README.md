@@ -1,6 +1,6 @@
 # MaterialsPhysicalProperties
 
-Modules for fitting common physical properties of condensed matter materials. 
+Modules for fitting common temperature-dependent physical properties of condensed matter materials. 
 Current iteration includes: Curie Weiss model for magnetization and Debye model for specific heat lattice vibrations. 
 
 To use:
