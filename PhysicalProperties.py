@@ -215,7 +215,7 @@ class HeatCapacityDebye():
         lw = linewidth
         
         Y = np.divide(self.y, self.x)
-        Y_fit = np.divide(self.debye_function(self.x_trim, *self.fitparams), self.x)
+        Y_fit = np.divide(self.debye_function(self.x_trim, *self.fitparams), self.x_trim)
 
         plt.figure()
         plt.plot(self.x, Y, 
