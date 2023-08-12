@@ -91,7 +91,7 @@ class CurieWeiss():
             Y_fit = self.CurieWeissFormula(self.x_trim, *self.fitparams)
             y_label = r'$\chi$ (emu mol$^{-1}$ Oe$^{-1}$)'
         
-        f = plt.figure()
+        plt.figure()
         
         plt.plot(self.x, Y, 
                  color = color_data, linestyle = '', marker='o', markersize = ms, label = label)
@@ -124,7 +124,7 @@ class CurieWeiss():
         plt.text(1.01, 0.02, f'{self.x_trim_label_low} K to {self.x_trim_label_high} K',
                  transform = ax.transAxes, fontsize=fs)
         
-        return f
+        
  
 
 class HeatCapacityDebye():   
@@ -217,7 +217,7 @@ class HeatCapacityDebye():
         Y = np.divide(self.y, self.x)
         Y_fit = np.divide(self.debye_function(self.x_trim, *self.fitparams), self.x)
 
-        f = plt.figure()
+        plt.figure()
         plt.plot(self.x, Y, 
                  color = color_data, linestyle = '', marker='o', markersize = ms, label = label)
         plt.plot(self.x_trim, Y_fit, 
@@ -249,5 +249,5 @@ class HeatCapacityDebye():
             plt.text(1.01,0.71,r'Scaling prefactor 2: %4.2f' % self.fitparams[3],
                      transform = ax.transAxes, fontsize=fs)
         
-        return f
+        
  
